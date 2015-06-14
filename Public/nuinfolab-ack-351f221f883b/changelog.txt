@@ -1,0 +1,120 @@
+Sentence tokenization:
+
+ * handle split numeric abbreviation indicators (e.g. "No. 1" being split into 2 sentences)
+ * split on newlines
+
+Word tokenizing:
+
+ * better handling of @ symbol for email addresses and Twitter handles
+
+Tagging & Chunking
+
+Retagging of entitiy chunks, and re-parsing including:
+
+ * tagging of corporation/organization suffixes (pos: CO_)
+ * re-writing of corporations as ORGANIZATION
+ * re-parsing for GPE,NN*,ORGANIZATION,CO_ phrases as ORGANIZATION
+ * improved name normalization
+
+Definite improvements:
+
+Pennsylvania Avenue/FACILITY -> Pennsylvania Avenue/LOCATION
+Southwest/PERSON + Airlines/ORGANIZATION -> Southwest Airlines Co./ORGANIZATION
+Obama/PERSON -> Obama administration - as ORGANIZATION
+New York/GPE -> The New York Times/ORGANIZATION
+Centers/ORGANIZATION + Disease Control/PERSON -> Centers for Disease Control/ORGANIZATION
+New/GPE + Jersey/PERSON -> New Jersey/GPE
+New York/GPE -> New York Police Department/ORGANIZATION
+National Board/ORGANIZATION + Screen Actors Guild/ORGANIZATION -> National Board of the Screen Actors Guild/ORGANIZATION
+University/ORGANIZATION + Puget Sound/PERSON -> University of Puget Sound/ORGANIZATION
+University/ORGANIZATION + MARYLAND/GPE -> University of Maryland/ORGANIZATION
+Fed/ORGANIZATION -> The Fed/ORGANIZATION (still sometimes extracted as Fed)
+Institute/ORGANIZATION + Supply Management/PERSON -> Institute for Supply Management/ORGANIZATION
+Ford Motor/ORGANIZATION -> Ford Motor Co./ORGANIZATION
+Department/ORGANIZATION -> State Department/ORGANIZATION
+
+
+iffy changes:
+
+Barclays/ORGANIZATION -> Barclays PLC in New York/ORGANIZATION
+Hipparchus/PERSON -> Hipparchus of Nicea/ORGANIZATION
+Retired/PERSON + Marine/PERSON + John Allen/PERSON -> Retired Marine Gen. John Allen
+Recep Tayyip Erdogan/PERSON -> Turkish President Recep Tayyip Erdogan/GPE
+Bashar Assad/PERSON -> Syrian President Bashar Assad/GPE
+
+
+Results for: http://www.bloomberg.com/news/2014-10-06/ebola-screening-at-u-s-airports-in-review-cdc-director.html
+
+Before:
+U.S. (GPE)
+West Africa|West (LOCATION)
+Ebola (ORGANIZATION)
+Thomas Frieden|Frieden (PERSON)
+African (ORGANIZATION)
+Obama (ORGANIZATION)
+White House (FACILITY)
+Dallas (GPE)
+Centers (ORGANIZATION)
+Barack (PERSON)
+Disease Control(PERSON)
+Liberian | Liberia (GPE)
+CNN (ORGANIZATION)
+Frieden (GPE)
+Duncan (GPE)
+Thomas Eric Duncan (PERSON)
+Africa (GPE)
+Ohio Republican (ORGANIZATION)
+Senator Rob Portman (PERSON)
+New York Times (GPE)
+Kelly (PERSON)
+European (GPE)
+Sierra Leone (PERSON)
+Guinea (GPE)
+Lisa Monaco (PERSON)
+Elizabeth Wasserman (PERSON)
+Americans (GPE)
+Airlines (ORGANIZATION)
+Southwest (PERSON)
+Caribbean (LOCATION)
+Mexico (GPE)
+FAA (ORGANIZATION)
+ewasserman2 (ORGANIZATION)
+Washington (GPE)
+jmorgan97 (ORGANIZATION)
+Jon Morgan (PERSON) 
+
+After:
+U.S. (GPE)
+West Africa | West (LOCATION)
+Ebola (ORGANIZATION)
+Thomas Frieden | Dr. Thomas Frieden | Frieden (PERSON)
+African (ORGANIZATION)
+The Obama administration (ORGANIZATION)
+White House (FACILITY)
+Dallas (GPE)
+Centers (ORGANIZATION)
+President Barack Obama | President Barack Obama's (PERSON)
+Disease Control (PERSON)
+Liberian | Liberia (GPE)
+CNN (ORANIZATION)
+Frieden (GPE)
+Duncan (GPE)
+Thomas Eric Duncan (PERSON)
+Africa (GPE)
+Ohio Republican (ORGANIZATION)
+Senator Rob Portman (PERSON)
+The New York Times (ORGANIZATION)
+Chief Executive Officer Gary Kelly | Kelly (PERSON)
+European (GPE)
+Sierra Leone (PERSON)
+Guinea (GPE)
+Lisa Monaco (PERSON)
+Elizabeth Wasserman (PERSON)
+Americans (GPE)
+Southwest Airlines Co. (ORGANIZATION)
+Southwest (PERSON)
+Caribbean (LOCATION)
+Mexico (GPE)
+FAA (Organization)
+Washington (GPE)
+Jon Morgan (PERSON)

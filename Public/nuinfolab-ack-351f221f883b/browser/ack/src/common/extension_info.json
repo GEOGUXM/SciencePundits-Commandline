@@ -1,0 +1,22 @@
+{
+    "content_scripts": [], 
+    "description": "Extension description", 
+    "creator": "Scott Bradley", 
+    "background_scripts": [
+        "main.js"
+    ], 
+    "homepage_url": "http://knightlab.com", 
+    "version": "0.9.0", 
+    "options_page": "options.html",
+    "browser_button": {
+        "caption": "Ack", 
+        "icon": "icons/button.png", 
+        "tooltipText": "Ack",
+        "popup": {
+            "url": "popup.html",
+            "width": 600,
+            "height": 520
+        }
+    }, 
+    "name": "Ack"
+}

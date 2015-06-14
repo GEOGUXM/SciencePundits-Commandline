@@ -1,0 +1,22 @@
+<?xml version="1.0" ?><RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+    <Description about="urn:mozilla:install-manifest">
+        <em:id>{5864F882-C358-49D5-875E-D9A3FE5CAB20}</em:id>
+        <em:name>Pundits</em:name>
+        <em:version>0.1.0</em:version>
+        <em:targetApplication>
+            <Description>
+                <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+                <em:minVersion>8.0</em:minVersion>
+                <em:maxVersion>29.*</em:maxVersion>
+            </Description>
+        </em:targetApplication>
+        <em:bootstrap>true</em:bootstrap>
+        <em:description>Pundits</em:description>
+        <em:creator>Northwestern University InfoLab</em:creator>
+        <em:homepageURL>http://infolabprojects.com/</em:homepageURL>
+        <em:iconURL>chrome://kango-5864f882-c358-49d5-875e-d9a3fe5cab20/content/icons/icon32.png</em:iconURL>
+        
+        
+        
+    </Description>
+</RDF>

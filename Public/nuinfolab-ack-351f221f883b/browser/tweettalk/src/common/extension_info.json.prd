@@ -1,0 +1,23 @@
+{
+    "content_scripts": [], 
+    "description": "TweetTalk", 
+    "creator": "Northwestern University InfoLab", 
+    "background_scripts": [
+        "js/main.js"
+    ], 
+    "homepage_url": "http://infolabprojects.com/", 
+    "version": "0.1.0", 
+    "browser_button": {
+        "caption": "TweetTalk", 
+        "icon": "icons/button.png", 
+        "tooltipText": "TweetTalk",
+        "popup": {
+            "url": "popup.html",
+            "width": 600,
+            "height": 520
+        }
+    }, 
+    "name": "TweetTalk",
+    "auth_url": "http://context.infolabprojects.com/auth/check/tweettalk/",
+    "base_url": "http://context.infolabprojects.com/" 
+}

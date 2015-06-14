@@ -1,0 +1,23 @@
+{
+    "content_scripts": [], 
+    "description": "Readdit", 
+    "creator": "Northwestern University InfoLab", 
+    "background_scripts": [
+        "js/main.js"
+    ], 
+    "homepage_url": "http://infolabprojects.com/", 
+    "version": "0.1.0", 
+    "browser_button": {
+        "caption": "Readdit", 
+        "icon": "icons/button.png", 
+        "tooltipText": "Readdit",
+        "popup": {
+            "url": "popup.html",
+            "width": 600,
+            "height": 520
+        }
+    }, 
+    "name": "Readdit",
+    "auth_url": "http://context.infolabprojects.com/auth/check/readdit/",
+    "base_url": "http://context.infolabprojects.com/" 
+}

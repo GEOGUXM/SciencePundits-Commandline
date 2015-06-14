@@ -1,0 +1,23 @@
+{
+    "content_scripts": [], 
+    "description": "View tweets about an article", 
+    "creator": "Northwestern University InfoLab", 
+    "background_scripts": [
+        "js/main.js"
+    ], 
+    "homepage_url": "http://infolabprojects.com/", 
+    "version": "0.1.0", 
+    "browser_button": {
+        "caption": "Qwotd", 
+        "icon": "icons/button.png", 
+        "tooltipText": "Qwotd",
+        "popup": {
+            "url": "popup.html",
+            "width": 600,
+            "height": 520
+        }
+    }, 
+    "name": "Qwotd",
+    "auth_url": "http://context.infolabprojects.com/auth/check/qwotd/",
+    "search_url": "http://context.infolabprojects.com/url/qwotd/" 
+}

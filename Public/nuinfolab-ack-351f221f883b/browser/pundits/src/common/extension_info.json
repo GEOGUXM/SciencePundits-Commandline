@@ -1,0 +1,23 @@
+{
+    "content_scripts": [], 
+    "description": "Pundits", 
+    "creator": "Northwestern University InfoLab", 
+    "background_scripts": [
+        "js/main.js"
+    ], 
+    "homepage_url": "http://infolabprojects.com/", 
+    "version": "0.1.0", 
+    "browser_button": {
+        "caption": "Pundits", 
+        "icon": "icons/button.png", 
+        "tooltipText": "Pundits",
+        "popup": {
+            "url": "popup.html",
+            "width": 600,
+            "height": 520
+        }
+    }, 
+    "name": "Pundits",
+    "auth_url": "http://context.infolabprojects.com/auth/check/pundits/",
+    "base_url": "http://context.infolabprojects.com/" 
+}

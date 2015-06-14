@@ -1,0 +1,4 @@
+{
+    "id": "lncobipbmbepfjgdimcdjclgogaclndf",
+    "content_security_policy": "script-src 'self' https://platform.twitter.com https://syndication.twitter.com https://cdn.api.twitter.com https://syndication.twimg.com; object-src 'self'"
+}
